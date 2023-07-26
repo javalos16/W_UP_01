@@ -33,6 +33,8 @@ We are trying to find the average number of push ups between line players and sk
 
 <!--Decide on your methods: use "variable analysis" or other appropriate descriptors. Make sure to choose at least one graphical method and at least one numerical method.!-->
 
+We will be analyzing the push ups using Num~Cat for the average of players. The method used will be a box plot, numerical summary for the numerical descriptive results. We will also be including a t-test.
+
 # Results
 
 <!--Divide this section into two sub-sections: One for your descriptive results and one for your inferential results.!-->
@@ -43,16 +45,39 @@ We are trying to find the average number of push ups between line players and sk
 
 <!--Graphical results here. Make sure to show your code. Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too. Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+boxplot(pushups~position,data=mydata)
+```
+
+The skill players are doing on average more push ups than the line players.
+
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(pushups~position,data=mydata)
+```
+
+The skill players are in mean are doing about 3X more push ups then the line players. The line players on mean are 17.1, this is in a 2 minute time frame.
 
 ## Inferential Results
 
 <!--State hypothesis clearly. Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc. Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
 
+  
+```{r}
+t.test(pushups~position,data=mydata)
+```
+
+After the t-test the P-value= .000009421. Since there is a difference in the amount of push ups the skill players and line players can do. After the looking at the t-test, we reject the null hypothesis.
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here. If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason. Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+The original question is; there is no difference between the average number of pushups of line vs skill players. Based on the data provided, we can conclude that we reject the null, there is a significant differnce on the amount of push ups the skill players and line players.
+
 
