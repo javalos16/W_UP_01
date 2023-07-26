@@ -27,6 +27,8 @@ $H_0$: There is no difference between the average number of pushups of line vs s
 
 $H_A$: The average number of pushups done by line players is statistically different than that of skill players.
 
+We are trying to find the average number of push ups between line players and skilled players. is there a statistical difference in the average number of push ups between players.
+
 # Methods
 
 <!--Decide on your methods: use "variable analysis" or other appropriate descriptors. Make sure to choose at least one graphical method and at least one numerical method.!-->
